@@ -1,0 +1,33 @@
+Player
+
+Input: Used to fuel outputs
+Light: Shines a brine light
+	Player Light Source (small lazer beam)
+Floor Switch: Pad on the floor when the player or an object depresses it.
+
+Output: Does something upon accepting some input(s)
+Doors
+
+Interactable: Can press a button to do some action
+Ladder
+	Climb Up
+Lantern
+	Pull or push
+
+Monsters: Must be killed to progress in some areas
+Simple
+	Runs away from player and off platforms
+Flying
+	Hovers from right to left in the air
+
+Scripts:
+Move Script: Moves gameObject from point a to point b. Set looping? Set slerp?
+Interactable Base Script:
+	Ladder
+	Lantern (Set flags on lanterns for different types)
+		Flags
+Monster Base Script:
+	Simple
+	Flying
+Output Base Script:
+	Door Script
