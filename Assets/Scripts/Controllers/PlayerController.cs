@@ -34,17 +34,17 @@ public class PlayerController : MonoBehaviour
             if (angle_between <= maxApproachAngle)
             {
                 transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-
-                if (Input.GetButton("Right"))
-                {
-                    rigidBody.MovePosition(rigidBody.position + (transform.right * Speed));
-                }
-                else if (Input.GetButton("Left"))
-                {
-                    rigidBody.MovePosition(rigidBody.position + (-transform.right * Speed));
-                }
             }
             currentNormal = hit.normal;
-        }  
+        }
+
+        if (Input.GetButton("Right"))
+        {
+            rigidBody.MovePosition(rigidBody.position + (transform.right * Speed));
+        }
+        else if (Input.GetButton("Left"))
+        {
+            rigidBody.MovePosition(rigidBody.position + (-transform.right * Speed));
+        }
     }
 }
